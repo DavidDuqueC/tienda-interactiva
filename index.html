@@ -1,24 +1,87 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7" crossorigin="anonymous">
-    <style>
-        .header-custom {
-          background-color: #e6ccff; 
-          color: #001f3f;            
-        }
-      </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Dshop</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7" crossorigin="anonymous"/>
+  <style>
+    .header-custom {
+      background-color: #e6ccff; /* Morado claro */
+      color: #001f3f; /* Azul muy oscuro */
+    }
+  </style>
 </head>
 <body>
-    <header class="header-custom">
-        <div class="container">
-          <h1 class="mb-0">🛍️ Dshop</h1>
-          <p class="lead">Tu tienda en línea de confianza</p>
+  <header class="header-custom py-4">
+    <div class="container text-center">
+      <h1 class="mb-0">🥫 Dshop</h1>
+      <p class="lead">Tienda en línea de alimentos</p>
+    </div>
+  </header>
+  <main class="container my-5">
+    <form>
+      <div class="mb-3">
+        <label for="categoria" class="form-label">Selecciona una categoría de alimentos:</label>
+        <select class="form-select" id="categoria" name="categoria">
+          <option selected disabled>Elige una categoría</option>
+          <option value="frutas">Frutas</option>
+          <option value="verduras">Verduras</option>
+          <option value="carnes">Carnes</option>
+          <option value="lacteos">Lácteos</option>
+          <option value="panaderia">Panadería</option>
+          <option value="bebidas">Bebidas</option>
+        </select>
+      </div>
+      <button type="submit" class="btn btn-primary">Buscar</button>
+    </form>
+    <section class="mt-5">
+        <h2 class="mb-4">Productos destacados</h2>
+        <div class="row row-cols-1 row-cols-md-3 g-4">
+          <!-- Producto 1 -->
+          <div class="col">
+            <div class="card h-100 text-center">
+              <div class="emoji-display">🍎</div>
+              <div class="card-body">
+                <h5 class="card-title">Manzanas Rojas</h5>
+                <p class="card-text">Deliciosas manzanas frescas.</p>
+                <p class="fw-bold">$5.000 / kg</p>
+                <a href="#" class="btn btn-success">Agregar al carrito</a>
+              </div>
+            </div>
+          </div>
+          <!-- Producto 2 -->
+          <div class="col">
+            <div class="card h-100 text-center">
+              <div class="emoji-display">🥛</div>
+              <div class="card-body">
+                <h5 class="card-title">Leche Entera</h5>
+                <p class="card-text">Leche fresca pasteurizada.</p>
+                <p class="fw-bold">$3.500 / litro</p>
+                <a href="#" class="btn btn-success">Agregar al carrito</a>
+              </div>
+            </div>
+          </div>
+          <!-- Producto 3 -->
+          <div class="col">
+            <div class="card h-100 text-center">
+              <div class="emoji-display">🍞</div>
+              <div class="card-body">
+                <h5 class="card-title">Pan Artesanal</h5>
+                <p class="card-text">Pan recién horneado con masa madre.</p>
+                <p class="fw-bold">$2.000 / unidad</p>
+                <a href="#" class="btn btn-success">Agregar al carrito</a>
+              </div>
+            </div>
+          </div>
         </div>
-      </header>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js" integrity="sha384-k6d4wzSIapyDyv1kpU366/PK5hCdSbCRGRCMv+eplOQJWyd1fbcAu9OCUj5zNLiq" crossorigin="anonymous"></script>
+      </section>
+    </main>
+  
+
+</main>
+
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js" integrity="sha384-k6d4wzSIapyDyv1kpU366/PK5hCdSbCRGRCMv+eplOQJWyd1fbcAu9OCUj5zNLiq" crossorigin="anonymous"></script>
 </body>
 </html>
