@@ -29,59 +29,62 @@
     <form>
       <div class="mb-3">
         <label for="categoria" class="form-label">Selecciona una categoría de alimentos:</label>
-        <select class="form-select" id="categoria" name="categoria">
+        <select  class="form-select" id="categoria" name="categoria">
           <option selected disabled>Elige una categoría</option>
           <option value="frutas">Frutas</option>
-          <option value="verduras">Verduras</option>
-          <option value="carnes">Carnes</option>
           <option value="lacteos">Lácteos</option>
           <option value="panaderia">Panadería</option>
           <option value="bebidas">Bebidas</option>
         </select>
       </div>
-      <button type="submit" class="btn btn-primary">Buscar</button>
+      <button onclick="filtrarCategoria(event)" type="button" class="btn btn-primary">Buscar</button>
     </form>
 
     <section class="mt-5">
       <h2 class="mb-4">Productos destacados</h2>
       <div class="row row-cols-1 row-cols-md-3 g-4">
         <div class="col">
-          <div class="card h-100 text-center">
+          <div class="card h-100 text-center" id="item1" data-categoria="frutas">
             <div class="emoji-display">🍎</div>
             <div class="card-body">
               <h5 class="card-title">Manzanas Rojas</h5>
               <p class="card-text">Deliciosas manzanas frescas.</p>
               <p class="fw-bold">$5.000 / kg</p>
-              <a href="#" class="btn btn-primary">Agregar al carrito</a>
+              <a href="#"  kind="Manzana"onclick="agregarCarrito(event)" class="btn btn-primary">Agregar al carrito</a>
             </div>
           </div>
         </div>
         <div class="col">
-          <div class="card h-100 text-center">
+          <div class="card h-100 text-center" id="item2" data-categoria="lacteos, bebidas">
             <div class="emoji-display">🥛</div>
             <div class="card-body">
               <h5 class="card-title">Leche Entera</h5>
               <p class="card-text">Leche fresca pasteurizada.</p>
               <p class="fw-bold">$3.500 / litro</p>
-              <a href="#" class="btn btn-primary">Agregar al carrito</a>
+              <a href="#" kind="Leche" onclick="agregarCarrito(event)" class="btn btn-primary">Agregar al carrito</a>
             </div>
           </div>
         </div>
         <div class="col">
-          <div class="card h-100 text-center">
+          <div class="card h-100 text-center" id="item3" data-categoria="panaderia">
             <div class="emoji-display">🍞</div>
             <div class="card-body">
               <h5 class="card-title">Pan Artesanal</h5>
               <p class="card-text">Pan recién horneado con masa madre.</p>
               <p class="fw-bold">$2.000 / unidad</p>
-              <a href="#" class="btn btn-primary">Agregar al carrito</a>
+              <a href="#" kind="Pan" onclick="agregarCarrito(event)" class="btn btn-primary">Agregar al carrito</a>
             </div>
           </div>
         </div>
       </div>
     </section>
+    <section class="mt-5">
+      <h1 style="color: #9e5fa8;">🛒 Carrito</h1>
+      <ul id="carrito" class="list-group"></ul>
+    </section>
   </main>
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js" integrity="sha384-k6d4wzSIapyDyv1kpU366/PK5hCdSbCRGRCMv+eplOQJWyd1fbcAu9OCUj5zNLiq" crossorigin="anonymous"></script>
+  <script src="events.js"></script>
 </body>
 </html>
